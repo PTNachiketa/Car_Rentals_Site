@@ -5,8 +5,8 @@ const Header = () => {
   return (
     <>
        <div className='bg-black p-3 flex justify-between items-center px-5'>
-          <h1 className='text-white text-3xl'>CarRentals</h1>
-          <FaUser className='text-white text-2xl'/>
+          <h1 className='text-white text-3xl cursor-pointer'>CarRentals</h1>
+          <FaUser className='text-white text-2xl cursor-pointer'/>
        </div>
     </>
   )
