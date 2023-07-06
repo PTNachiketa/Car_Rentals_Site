@@ -9,6 +9,15 @@ module.exports = {
         '68': '17rem',
       }
     },
+
+    fontFamily: {
+      RobotoSlab: 'Roboto Slab'
+    },
+
+    fontWeight: {
+      roboto200: 200,
+      roboto300: 300
+    }
   },
   plugins: [],
 }

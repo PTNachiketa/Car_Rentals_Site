@@ -5,8 +5,8 @@ import Cars_Slider from '../Components/Car_slider'
 const Landing = () => {
   return (
     <>
-       <Header/>
-       <Cars_Slider/>
+      <Header/>
+      <Cars_Slider/>
     </>
   )
 }
