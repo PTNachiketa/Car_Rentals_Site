@@ -40,7 +40,14 @@ const SignUp = () => {
 
           {/* Email */}
           <div className={`${phoneNumberVerified ? 'block' : 'hidden'} flex flex-col sm:ml-28 lg:ml-40`}>
-               <h1 className='text-xl font-YsabeauInfant ml-0 mb-8 sm:text-2xl md:text-3xl'>Welcome to CarRentals</h1>
+               <h1 className='text-xl font-YsabeauInfant ml-0 mb-6 sm:text-2xl md:text-3xl'>Welcome to CarRentals</h1>
+
+               <div className='flex border-2 border-gray-200 rounded-md p-3 items-center gap-3 cursor-pointer hover:bg-black hover:text-white mb-1'>
+                    <FcGoogle className='text-2xl'/>
+                    <p className='text-lg'>Continue with Google</p>
+               </div>
+
+               <div className='flex items-center justify-center mb-1'>or</div>
 
                <div className='flex flex-col mb-9'>
                     <label htmlFor='email' className='text-md mb-2'>Email</label>
@@ -52,12 +59,7 @@ const SignUp = () => {
                </div>
 
                <div className='flex items-center'>
-                    <button type='button' className='text-xl font-YsabeauInfant bg-black text-white p-2 rounded-lg mb-7'>Accelerate</button>
-               </div>
-               
-               <div className='flex border-2 border-gray-200 items-center gap-3'>
-                    <FcGoogle/>
-                    <p>Continue with Google</p>
+                    <button type='button' className='text-xl font-YsabeauInfant bg-black text-white p-2 rounded-lg'>Accelerate</button>
                </div>
           </div>
 
