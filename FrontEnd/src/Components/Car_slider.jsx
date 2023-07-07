@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { cars } from '../Exports/Car_Images'
+import { cities } from '../Exports/Cities_names'
 import { BsChevronCompactLeft } from 'react-icons/bs'
 import { BsChevronCompactRight } from  'react-icons/bs'
 
@@ -37,15 +38,37 @@ const Car_slider = () => {
   }, [currentIndex])
 
   return (
-    <div className='relative transition ease-linear'>
-      <img src={cars[currentIndex].img} className='lg:h-[40rem] md:h-[32rem] w-full'/>
-      <div className='absolute left-3 top-[47%] cursor-pointer'>
-        <BsChevronCompactLeft onClick={prevSlide} className='text-4xl md:text-5xl lg:text-6xl text-gray-500'/>
+    <>
+
+      {/* Automatic Image Slider */}
+      <div className='relative mb-24'>
+        <img src={cars[currentIndex].img} className='lg:h-[40rem] md:h-[32rem] w-full'/>
+        <div className='absolute left-3 top-[47%] cursor-pointer'>
+          <BsChevronCompactLeft onClick={prevSlide} className='text-4xl md:text-5xl lg:text-6xl text-gray-500'/>
+        </div>
+        <div className='absolute right-3 top-[47%] cursor-pointer'>
+          <BsChevronCompactRight onClick={afterSlide} className='text-4xl md:text-5xl lg:text-6xl text-gray-500'/>
+        </div>
       </div>
-      <div className='absolute right-3 top-[47%] cursor-pointer'>
-        <BsChevronCompactRight onClick={afterSlide} className='text-4xl md:text-5xl lg:text-6xl text-gray-500'/>
+
+
+      {/* DropDown */}
+      <div className='flex flex-col justify-center items-center mb-24'>
+        <h1 className='text-gray-700 text-6xl font-YsabeauInfant mb-6'>Your Location</h1>
+        <div>
+          <select name="cities" id="cities" className='w-72 text-2xl font-YsabeauInfant rounded-lg border-2 p-2 cursor-pointer'>
+            <option value="select"><span className='font-YsabeauInfant'>Select location</span></option>
+            {
+              cities.map(city => {
+                 return (
+                     <option key={city.id}>{city.city}</option>
+                 )
+              })
+            }
+          </select>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 
